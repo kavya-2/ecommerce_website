@@ -1,0 +1,14 @@
+<h1><%= @product.title %></h1>
+<p><%= @product.description %></p>
+
+<div>
+  <% @product.images.each do |image| %>
+    <%= image_tag image.variant(resize: '300x300') %>
+  <% end %>
+</div>
+
+<p>Price: <%= @product.price %></p>
+<p>Category: <%= @product.category.name %></p>
+
+<%= link_to 'Edit', edit_admin_product_path(@product), class: 'btn btn-warning' %>
+<%= link_to 'Back to Products', admin_products_path, class: 'btn btn-secondary' %>
