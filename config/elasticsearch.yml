@@ -1,0 +1,7 @@
+development:
+  host: 'localhost'
+  port: 9200
+  scheme: 'https'
+  log: true
+  user: 'elastic'         
+  password: 'password'     

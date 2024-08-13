@@ -27,7 +27,7 @@
 
   <div class="form-group">
     <%= form.label :category_id, 'Category' %>
-    <%= form.collection_select :category_id, Category.all, :id, :name, {}, {class: 'form-control'} %>
+		<%= form.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category", class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -37,7 +37,7 @@
 
   <div class="form-group">
     <%= form.label :colors, 'Colors' %>
-    <%= form.text_field :colors, value: @product.colors.join(','), class: 'form-control', placeholder: 'Red,Blue,Green' %>
+		<%= form.text_field :colors, value: (@product.colors || []).join(','), class: 'form-control', placeholder: 'Red,Blue,Green' %>
   </div>
 
   <div class="form-group">
